@@ -117,6 +117,26 @@ $(document).ready(function () {
 
     toggleMenu();
 
+    function modalInit() {
+
+        if ($('.modal').length === 0) {
+            return false;
+        }
+
+        $('.modal').iziModal({
+            transitionIn: 'bounceInDown',
+            transitionOut: 'bounceOutDown',
+            bodyOverflow: true,
+            overlayColor: "rgba(0, 0, 0, 0.4)",
+            width: false,
+            closeOnEscape: true,
+            closeButton: true,
+            zindex: 10000,
+            focusInput: false
+        });
+    }
+
+    modalInit();
 
     
 });
